@@ -7,8 +7,10 @@ chart_data = pd.DataFrame(
     columns=["a","b","c","d"]
 )
 
-x = st.text_input("Favorite Movie?")
-st.write(f"you favorite movie is: {x}")
+st.title('Movie Budget Data')
+
+# x = st.text_input("Favorite Movie?")
+# st.write(f"you favorite movie is: {x}")
 
 data = pd.read_csv("movies.csv")
 
@@ -28,5 +30,7 @@ budget_by_director = top_50_data.groupby('director')['budget'].sum().reset_index
 st.write(top_50_data)
 st.bar_chart(budget_by_director.set_index('director'))
 
-st.bar_chart(chart_data)
-st.line_chart(chart_data)
+# st.markdown("## Just a random graph")
+# st.bar_chart(chart_data)
+# st.markdown("## Just a random graph")
+# st.line_chart(chart_data)

@@ -75,7 +75,7 @@ plot_data['Month'] = pd.Categorical(plot_data['Month'], categories=months, order
 plot_data = plot_data.sort_values('Month')
 
 # Streamlit app
-st.title('Monthly Achievement Comparison')
+
 
 # Line chart for comparison
 st.line_chart(plot_data.set_index('Month'))
